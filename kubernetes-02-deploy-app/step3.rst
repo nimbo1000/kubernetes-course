@@ -14,7 +14,7 @@ running.
 
 We will run the proxy on the background.
 
-``kubectl proxy``\ {{execute }}
+``kubectl proxy &``\ {{execute }}
 
 We now have a connection between our host (the online terminal) and the
 Kubernetes cluster. The proxy enables direct access to the API from
