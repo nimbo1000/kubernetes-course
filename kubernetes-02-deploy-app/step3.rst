@@ -14,7 +14,7 @@ running.
 
 We will run the proxy on the background.
 
-``kubectl proxy &``\ {{execute }}
+``kubectl proxy &``
 
 We now have a connection between our host (the online terminal) and the
 Kubernetes cluster. The proxy enables direct access to the API from
@@ -24,7 +24,7 @@ You can see all those APIs hosted through the proxy endpoint, now
 available at through http://localhost:8001. For example, we can query
 the version directly through the API using the ``curl`` command:
 
-``curl http://localhost:8001/version``\ {{execute }}
+``curl http://localhost:8001/version``
 
 The API server will automatically create an endpoint for each pod, based
 on the pod name, that is also accessible through the proxy.
@@ -32,13 +32,9 @@ on the pod name, that is also accessible through the proxy.
 First we need to get the Pod name, and we'll store in the environment
 variable POD\_NAME:
 
-``export POD_NAME=$(kubectl get pods -o go-template --template '\{\{range .items\}\}\{\{.metadata.name\}\}\{\{"\n"\}\}\{\{end\}\}') echo Name of the Pod: $POD_NAME``\ {{execute
-}}
-
+``export POD_NAME=$(kubectl get pods -o go-template --template '\{{range .items}}\{{.metadata.name}}\{{"\n"}}\{{end}}') echo Name of the Pod: $POD_NAME``
 Now we can make an HTTP request to the application running in that pod:
 
-``curl http://localhost:8001/api/v1/namespaces/default/pods/$POD_NAME/proxy/``\ {{execute
-}}
-
+``curl http://localhost:8001/api/v1/namespaces/default/pods/$POD_NAME/proxy/``
 The url is the route to the API of the Pod.
 
