@@ -1,4 +1,4 @@
-We already installed minikube for you. Check that it is properly
+We already installed a Kubernetes distribution based on k3s for you. Check that it is properly
 installed, by running the *minikube version* command:
 
 ``minikube version``\ {{execute}}
