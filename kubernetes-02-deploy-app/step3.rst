@@ -12,7 +12,7 @@ communications into the cluster-wide, private network. The proxy can be
 terminated by pressing control-C and won't show any output while its
 running.
 
-We will open a second terminal window to run the proxy.
+We will run the proxy on the background.
 
 ``kubectl proxy``\ {{execute }}
 
@@ -32,7 +32,7 @@ on the pod name, that is also accessible through the proxy.
 First we need to get the Pod name, and we'll store in the environment
 variable POD\_NAME:
 
-``export POD_NAME=$(kubectl get pods -o go-template --template '{{range .items}}{{.metadata.name}}{{"\n"}}{{end}}') echo Name of the Pod: $POD_NAME``\ {{execute
+``export POD_NAME=$(kubectl get pods -o go-template --template '\{\{range .items\}\}\{\{.metadata.name\}\}\{\{"\n"\}\}\{\{end\}\}') echo Name of the Pod: $POD_NAME``\ {{execute
 }}
 
 Now we can make an HTTP request to the application running in that pod:
@@ -42,7 +42,3 @@ Now we can make an HTTP request to the application running in that pod:
 
 The url is the route to the API of the Pod.
 
-*Note: Check the top of the terminal. The proxy was run in a new tab
-(Terminal 2), and the recent commands were executed the original tab
-(Terminal 1). The proxy still runs in the second tab, and this allowed
-our curl command to work using ``localhost:8001``.*
