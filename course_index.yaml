@@ -1,0 +1,32 @@
+title: Kubernetes
+description: Learn the basic Kubernetes commands
+labs:
+  - title: Create a Kubernetes cluster
+    description: Create a Kubernetes cluster
+    directory: /kubernetes-01-create-cluster
+    number_of_tasks: 3
+
+  - title: Deploy an app on Kubernetes
+    description: Deploy an app
+    directory: /kubernetes-02-deploy-app
+    number_of_tasks: 3
+
+  - title: Explore your app in Kubernetes
+    description: Explore your app
+    directory: /kubernetes-03-explore-app
+    number_of_tasks: 4
+
+  - title: Expose your app in Kubernetes publicly
+    description: Expose your app publicly
+    directory: /kubernetes-04-expose-app
+    number_of_tasks: 3
+
+  - title: Scale up your app in Kubernetes
+    description: Scale up your app
+    directory: /kubernetes-05-scale-app
+    number_of_tasks: 3
+
+  - title: Update your app in Kubernetes
+    description: Update your app
+    directory: /kubernetes-06-update-app
+    number_of_tasks: 3
