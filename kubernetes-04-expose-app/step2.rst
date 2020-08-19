@@ -16,7 +16,7 @@ You can do the same to list the existing services:
 Get the name of the Pod and store it in the POD\_NAME environment
 variable:
 
-``export POD_NAME=$(kubectl get pods -o go-template --template '{{range .items}}{{.metadata.name}}{{"\n"}}{{end}}') echo Name of the Pod: $POD_NAME``\ {{execute}}
+``export POD_NAME=$(kubectl get pods -o go-template --template '&#123;&#123;range .items&#125;&#125;&#123;&#123;.metadata.name&#125;&#125;&#123;&#123;"\n"&#125;&#125;&#123;&#123;end&#125;&#125;') echo Name of the Pod: $POD_NAME``\ {{execute}}
 
 To apply a new label we use the label command followed by the object
 type, object name and the new label:
