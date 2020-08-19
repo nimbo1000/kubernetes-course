@@ -30,7 +30,7 @@ we’ll run the ``describe service`` command:
 Create an environment variable called NODE\_PORT that has the value of
 the Node port assigned:
 
-``export NODE_PORT=$(kubectl get services/kubernetes-bootcamp -o go-template='{{(index .spec.ports 0).nodePort}}') echo NODE_PORT=$NODE_PORT``\ {{execute}}
+``export NODE_PORT=$(kubectl get services/kubernetes-bootcamp -o go-template='&#123;&#123;(index .spec.ports 0).nodePort&#125;&#125;') echo NODE_PORT=$NODE_PORT``\ {{execute}}
 
 Now we can test that the app is exposed outside of the cluster using
 ``curl``, the IP of the Node and the externally exposed port:
