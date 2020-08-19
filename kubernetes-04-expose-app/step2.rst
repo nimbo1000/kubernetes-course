@@ -1,22 +1,17 @@
-The Deployment created automatically a label for our Pod. With
-``describe deployment`` command you can see the name of the label:
-
-``kubectl describe deployment``\ {{execute}}
-
-Let’s use this label to query our list of Pods. We’ll use the
+We can use the label to query our list of Pods. We’ll use the
 ``kubectl get pods`` command with -l as a parameter, followed by the
 label values:
 
-``kubectl get pods -l run=kubernetes-bootcamp``\ {{execute}}
+``kubectl get pods -l run=nginx``\ {{execute}}
 
 You can do the same to list the existing services:
 
-``kubectl get services -l run=kubernetes-bootcamp``\ {{execute}}
+``kubectl get services -l run=nginx``\ {{execute}}
 
 Get the name of the Pod and store it in the POD\_NAME environment
 variable:
 
-``export POD_NAME=$(kubectl get pods -o go-template --template '&#123;&#123;range .items&#125;&#125;&#123;&#123;.metadata.name&#125;&#125;&#123;&#123;"\n"&#125;&#125;&#123;&#123;end&#125;&#125;') echo Name of the Pod: $POD_NAME``\ {{execute}}
+``export POD_NAME=$(kubectl get pods -o go-template --template '\{\{range .items}}\{\{.metadata.name}}\{\{"\n"}}\{\{end}}') && echo Name of the Pod: $POD_NAME``\ {{execute}}
 
 To apply a new label we use the label command followed by the object
 type, object name and the new label:
