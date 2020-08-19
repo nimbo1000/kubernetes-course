@@ -8,7 +8,7 @@ Now again, we'll get the Pod name and query that pod directly through
 the proxy. To get the Pod name and store it in the POD\_NAME environment
 variable:
 
-``export POD_NAME=$(kubectl get pods -o go-template --template '\{\{range .items\}\}\{\{.metadata.name\}\}\{\{"\n"\}\}\{\{end\}\}') echo Name of the Pod: $POD_NAME``\ 
+``export POD_NAME=$(kubectl get pods -o go-template --template '\{\{range .items}}\{\{.metadata.name}}\{\{"\n"}}\{\{end}}') && echo Name of the Pod: $POD_NAME``\ 
 
 To see the output of our application, run a ``curl`` request.
 
