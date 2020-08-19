@@ -4,7 +4,7 @@ deployment name and app image location (include the full repository url
 for images hosted outside Docker hub). We want to run the app on a
 specific port so we add the ``--port`` parameter:
 
-``kubectl run kubernetes-bootcamp --image=gcr.io/google-samples/kubernetes-bootcamp:v1 --port=8080``\ {{execute}}
+``kubectl run kubernetes-bootcamp --image=onpit/kubernetes-bootcamp --port=8080``
 
 Great! You just deployed your first application by creating a
 deployment. This performed a few things for you:
@@ -17,7 +17,7 @@ deployment. This performed a few things for you:
 
 To list your deployments use the ``get deployments`` command:
 
-``kubectl get deployments``\ {{execute}}
+``kubectl get deployments``
 
 We see that there is 1 deployment running a single instance of your app.
 The instance is running inside a Docker container on your node.
