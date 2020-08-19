@@ -11,13 +11,13 @@ description: Create a Kubernetes cluster
 #  hidefinish: false
 details:
   steps:
+#  - name: step1
+#    title: Cluster up and running
+#    text: step1.rst
   - name: step1
-    title: Cluster up and running
-    text: step1.rst
-  - name: step2
     title: Cluster version
     text: step2.rst
-  - name: step3
+  - name: step2
     title: Cluster details
     text: step3.rst
   intro:
