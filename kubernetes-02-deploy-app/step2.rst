@@ -15,9 +15,9 @@ deployment. This performed a few things for you:
 -  configured the cluster to reschedule the instance on a new Node when
    needed
 
-To list your deployments use the ``get deployments`` command:
+To list your pods use the ``get pods`` command:
 
-``kubectl get deployments``
+``kubectl get pods``
 
 We see that there is 1 deployment running a single instance of your app.
 The instance is running inside a Docker container on your node.
