@@ -1,11 +1,13 @@
-To list your deployments use the ``get deployments`` command:
+Let’s deploy our application again:
+
+``kubectl create deployment nginx --image=nginx --port=80``
+
+To verify that the application is running, we’ll use the ``kubectl get`` command and look for existing
+Pods:
+
 ``kubectl get deployments``\ {{execute}}
 
 We should have 1 Pod. If not, run the command again. This shows:
-
-The DESIRED state is showing the configured number of replicas
-
-The CURRENT state show how many replicas are running now
 
 The UP-TO-DATE is the number of replicas that were updated to match the
 desired (configured) state
@@ -17,7 +19,7 @@ Next, let’s scale the Deployment to 4 replicas. We’ll use the
 ``kubectl scale`` command, followed by the deployment type, name and
 desired number of instances:
 
-``kubectl scale deployments/kubernetes-bootcamp --replicas=4``\ {{execute}}
+``kubectl scale deployments/nginx --replicas=4``\ {{execute}}
 
 To list your Deployments once again, use ``get deployments``:
 
@@ -32,7 +34,7 @@ There are 4 Pods now, with different IP addresses. The change was
 registered in the Deployment events log. To check that, use the describe
 command:
 
-``kubectl describe deployments/kubernetes-bootcamp``\ {{execute}}
+``kubectl describe deployments/nginx``\ {{execute}}
 
 You can also view in the output of this command that there are 4
 replicas now.
