@@ -1,7 +1,7 @@
 To scale down the Service to 2 replicas, run again the ``scale``
 command:
 
-``kubectl scale deployments/kubernetes-bootcamp --replicas=2``\ {{execute}}
+``kubectl scale deployments/nginx --replicas=2``\ {{execute}}
 
 List the Deployments to check if the change was applied with the
 ``get deployments`` command:
