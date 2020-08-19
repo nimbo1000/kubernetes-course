@@ -18,7 +18,7 @@ application. The source code of the app is in the server.js file:
 
 You can check that the application is up by running a curl command:
 
-``curl localhost:8080``
+``curl localhost:80``
 
 *Note: here we used localhost because we executed the command inside the
 NodeJS container*
