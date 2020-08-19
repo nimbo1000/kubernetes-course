@@ -15,6 +15,10 @@ desired (configured) state
 The AVAILABLE state shows how many replicas are actually AVAILABLE to
 the users
 
+We can get the name of the pod with:
+
+``export POD_NAME=$(kubectl get pods -o go-template --template '\{\{range .items}}\{\{.metadata.name}}\{\{"\n"}}\{\{end}}') && echo Name of the Pod: $POD_NAME``
+
 Next, let’s scale the Deployment to 2 replicas. We’ll use the
 ``kubectl scale`` command, followed by the deployment type, name and
 desired number of instances:
