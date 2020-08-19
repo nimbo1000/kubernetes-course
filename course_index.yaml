@@ -26,7 +26,7 @@ labs:
     directory: /kubernetes-05-scale-app
     number_of_tasks: 3
 
-  - title: Update your app in Kubernetes
-    description: Update your app
-    directory: /kubernetes-06-update-app
-    number_of_tasks: 3
+#  - title: Update your app in Kubernetes
+#    description: Update your app
+#    directory: /kubernetes-06-update-app
+#    number_of_tasks: 3
