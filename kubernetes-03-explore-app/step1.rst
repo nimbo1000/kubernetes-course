@@ -1,5 +1,8 @@
-Let’s verify that the application we deployed in the previous scenario
-is running. We’ll use the ``kubectl get`` command and look for existing
+Let’s deploy our application again:
+
+``kubectl run nginx --image=nginx --port=80``
+
+To verify that the application is running, we’ll use the ``kubectl get`` command and look for existing
 Pods:
 
 ``kubectl get pods``\ {{execute}}
