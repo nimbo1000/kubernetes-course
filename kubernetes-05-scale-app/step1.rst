@@ -1,6 +1,6 @@
 Let’s deploy our application again:
 
-``kubectl create deployment nginx --image=nginx --port=80``
+``kubectl create deployment nginx --image=nginx``
 
 To verify that the application is running, we’ll use the ``kubectl get`` command and look for existing
 Pods:
@@ -15,17 +15,17 @@ desired (configured) state
 The AVAILABLE state shows how many replicas are actually AVAILABLE to
 the users
 
-Next, let’s scale the Deployment to 4 replicas. We’ll use the
+Next, let’s scale the Deployment to 2 replicas. We’ll use the
 ``kubectl scale`` command, followed by the deployment type, name and
 desired number of instances:
 
-``kubectl scale deployments/nginx --replicas=4``\ {{execute}}
+``kubectl scale deployments/nginx --replicas=2``\ {{execute}}
 
 To list your Deployments once again, use ``get deployments``:
 
 ``kubectl get deployments``\ {{execute}}
 
-The change was applied, and we have 4 instances of the application
+The change was applied, and we have 2 instances of the application
 available. Next, let’s check if the number of Pods changed:
 
 ``kubectl get pods -o wide``\ {{execute}}
