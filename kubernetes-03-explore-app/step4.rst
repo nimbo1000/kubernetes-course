@@ -11,16 +11,12 @@ Next let’s start a bash session in the Pod’s container:
 
 ``kubectl exec -ti $POD_NAME bash``
 
-We have now an open console on the container where we run our NodeJS
-application. The source code of the app is in the server.js file:
-
-``cat server.js``
-
-You can check that the application is up by running a curl command:
+We have now an open console on the container where our web
+application is running. 
+You can check that by running a curl command:
 
 ``curl localhost:80``
 
-*Note: here we used localhost because we executed the command inside the
-NodeJS container*
+*Note: here we used localhost because we executed the command inside the container*
 
 To close your container connection type ``exit``.
