@@ -16,7 +16,7 @@ the cluster starts. To create a new service and expose it to
 external traffic we’ll use the expose command with NodePort as parameter.
 
 ``kubectl expose pod/nginx --type="NodePort" --port 80``
-
+ 
 Let’s run again the ``get services`` command:
 
 ``kubectl get services``
