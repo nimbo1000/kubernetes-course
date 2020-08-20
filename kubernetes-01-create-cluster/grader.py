@@ -17,5 +17,5 @@ class LabGrader(Grader):
 		if inputCommand == "kubectl get nodes":
 			self.getNodes = True
 			print("gn true")
-		if self.clusterInfo and self.getNodes:
+		if hasattr(self, 'clusterInfo') and hasattr(self, 'getNodes') and self.clusterInfo and self.getNodes:
 			return True
