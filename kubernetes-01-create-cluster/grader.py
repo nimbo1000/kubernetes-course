@@ -1,5 +1,3 @@
-#This is a template for the grader
-
 from onpit import Grader
 from os.path import join, exists
 
