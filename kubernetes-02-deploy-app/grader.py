@@ -4,7 +4,7 @@ from os.path import join, exists
 class LabGrader(Grader):
 	@Grader.addStep(name='step1')
 	def step1(self, workingDir, inputCommand):
-		if inputCommand == "kubectl cluster-info":
+		if inputCommand == "kubectl version":
 			self.firstCommand1 = True
 		if inputCommand == "kubectl get nodes":
 			self.secondCommand1 = True
