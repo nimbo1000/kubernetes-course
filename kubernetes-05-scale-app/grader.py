@@ -8,7 +8,7 @@ class LabGrader(Grader):
 			self.firstCommand1 = True
 		if inputCommand == "kubectl get deployments":
 			self.secondCommand1 = True
-		if inputCommand == """export POD_NAME=$(kubectl get pods -o go-template --template '{{range .items}}{{.metadata.name}}{{"\n"}}{{end}}') && echo Name of the Pod: $POD_NAME""":
+		if inputCommand == """export POD_NAME=$(kubectl get pods -o go-template --template '{{range .items}}{{.metadata.name}}{{"\\n"}}{{end}}') && echo Name of the Pod: $POD_NAME""":
 			self.thirdCommand1 = True
 		if inputCommand == "kubectl scale deployments/nginx --replicas=2":
 			self.fourthCommand1 = True
