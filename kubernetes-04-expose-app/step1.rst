@@ -33,7 +33,7 @@ we’ll run the ``describe service`` command:
 Create an environment variable called NODE\_PORT that has the value of
 the Node port assigned:
 
-r``export NODE_PORT=$(kubectl get services/nginx -o go-template='{{(index .spec.ports 0).nodePort}}') && echo NODE_PORT=$NODE_PORT``\ {{execute}}
+``export NODE_PORT=$(kubectl get services/nginx -o go-template='\{\{(index .spec.ports 0).nodePort}}') && echo NODE_PORT=$NODE_PORT``\ {{execute}}
 
 Now we can test that the app is exposed outside of the cluster using
 ``curl``, the IP of the Node and the externally exposed port. From within the node we can also use the localhost IP.
