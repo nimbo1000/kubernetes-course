@@ -34,13 +34,13 @@ class LabGrader(Grader):
 		if inputCommand == "curl http://localhost:8001/api/v1/namespaces/default/pods/$POD_NAME/proxy/":
 			self.thirdCommand3 = True
 			self.fourthCommand3 = True
-		if hasattr(self, 'firstCommand3')
+		if hasattr(self, 'firstCommand3'):
 			print("first", self.firstCommand3)
-		if hasattr(self, 'secondCommand3')
+		if hasattr(self, 'secondCommand3'):
 			print("second", self.secondCommand3)
-		if hasattr(self, 'thirdCommand3')
+		if hasattr(self, 'thirdCommand3'):
 			print("third", self.thirdCommand3)
-		if hasattr(self, 'fourthCommand3')
+		if hasattr(self, 'fourthCommand3'):
 			print("fourth", self.fourthCommand3)
 		if hasattr(self, 'firstCommand3') and hasattr(self, 'secondCommand3') and hasattr(self, 'thirdCommand3') and hasattr(self, 'fourthCommand3') and self.firstCommand3 and self.secondCommand3 and self.thirdCommand3 and self.fourthCommand3:
 			return True
