@@ -25,7 +25,7 @@ class LabGrader(Grader):
 			self.firstCommand2 = True
 		if inputCommand == "kubectl describe services/nginx":
 			self.secondCommand2 = True
-		if inputCommand == "export NODE_PORT=$(kubectl get services/kubernetes-bootcamp -o go-template='{{;(index .spec.ports 0).nodePort}}') echo NODE_PORT=$NODE_PORT":
+		if inputCommand == "export NODE_PORT=$(kubectl get services/nginx -o go-template='{{;(index .spec.ports 0).nodePort}}') echo NODE_PORT=$NODE_PORT":
 			self.thirdCommand2 = True
 		if inputCommand == "kubectl exec -ti $POD_NAME bash":
 			self.fourthCommand2 = True
