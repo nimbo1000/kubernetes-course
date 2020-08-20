@@ -11,11 +11,11 @@ class LabGrader(Grader):
 
 	@Grader.addStep(name='step2')
 	def step2(self, workingDir, inputCommand):
-		clusterInfo = False
-		getNodes = False
+		this.clusterInfo = False
+		this.getNodes = False
 		if inputCommand == "kubectl cluster-info":
-			clusterInfo = True
+			this.clusterInfo = True
 		if inputCommand == "kubectl get nodes":
-			getNodes = True
-		if clusterInfo and getNodes:
+			this.getNodes = True
+		if this.clusterInfo and this.getNodes:
 			return True
