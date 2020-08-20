@@ -9,7 +9,7 @@ class LabGrader(Grader):
 		if inputCommand == "kubectl get pods":
 			self.secondCommand1 = True
 		if inputCommand == "kubectl describe pods":
-			self.thirdCommand2 = True
+			self.thirdCommand1 = True
 		if hasattr(self, 'firstCommand1') and hasattr(self, 'secondCommand1') and hasattr(self, 'thirdCommand1') and self.firstCommand1 and self.secondCommand1 and self.thirdCommand1:
 			return True
 
