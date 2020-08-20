@@ -16,10 +16,10 @@ details:
 #    text: step1.rst
   - name: step1
     title: Cluster version
-    text: step2.rst
+    text: step1.rst
   - name: step2
     title: Cluster details
-    text: step3.rst
+    text: step2.rst
   intro:
 #    courseData: env-init.sh
     text: intro.rst
