@@ -35,7 +35,5 @@ class LabGrader(Grader):
 			self.firstCommand4 = True
 		if inputCommand == "kubectl exec -ti $POD_NAME bash":
 			self.thirdCommand4 = True
-		if inputCommand == "curl localhost:80":
-			self.fourthCommand4 = True
-		if hasattr(self, 'firstCommand4') and hasattr(self, 'thirdCommand4') and hasattr(self, 'fourthCommand4') and self.firstCommand4 and self.thirdCommand4 and self.fourthCommand4:
+		if hasattr(self, 'firstCommand4') and hasattr(self, 'thirdCommand4') and self.firstCommand4 and self.thirdCommand4:
 			return True
