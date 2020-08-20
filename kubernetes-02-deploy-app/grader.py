@@ -28,6 +28,7 @@ class LabGrader(Grader):
 			self.secondCommand3 = True
 		if inputCommand == """export POD_NAME=$(kubectl get pods -o go-template --template '{{range .items}}{{.metadata.name}}{{"\n"}}{{end}}') && echo Name of the Pod: $POD_NAME""":
 			self.thirdCommand3 = True
+			self.fourthCommand3 = True
 		if inputCommand == "curl http://localhost:8001/api/v1/namespaces/default/pods/$POD_NAME/proxy/":
 			self.fourthCommand3 = True
 		if hasattr(self, 'firstCommand3') and hasattr(self, 'secondCommand3') and hasattr(self, 'thirdCommand3') and hasattr(self, 'fourthCommand3') and self.firstCommand3 and self.secondCommand3 and self.thirdCommand3 and self.fourthCommand3:
