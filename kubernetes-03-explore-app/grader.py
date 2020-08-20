@@ -4,11 +4,13 @@ from os.path import join, exists
 class LabGrader(Grader):
 	@Grader.addStep(name='step1')
 	def step1(self, workingDir, inputCommand):
-		if inputCommand == "kubectl cluster-info":
+		if inputCommand == "kubectl run nginx --image=nginx --port=80":
 			self.firstCommand1 = True
-		if inputCommand == "kubectl get nodes":
+		if inputCommand == "kubectl get pods":
 			self.secondCommand1 = True
-		if hasattr(self, 'firstCommand1') and hasattr(self, 'secondCommand1') and self.firstCommand1 and self.secondCommand1:
+		if inputCommand == "kubectl describe pods":
+			self.thirdCommand2 = True
+		if hasattr(self, 'firstCommand1') and hasattr(self, 'secondCommand1') and hasattr(self, 'thirdCommand1') and self.firstCommand1 and self.secondCommand1 and self.thirdCommand1:
 			return True
 
 	@Grader.addStep(name='step2')
@@ -26,7 +28,7 @@ class LabGrader(Grader):
 			self.firstCommand3 = True
 		if inputCommand == "curl http://localhost:8001/version":
 			self.secondCommand3 = True
-		if inputCommand == "export POD_NAME=$(kubectl get pods -o go-template --template '{{range .items}}{{.metadata.name}}{{"\n"}}{{end}}') && echo Name of the Pod: $POD_NAME":
+		if inputCommand == """export POD_NAME=$(kubectl get pods -o go-template --template '{{range .items}}{{.metadata.name}}{{"\\n"}}{{end}}') && echo Name of the Pod: $POD_NAME""":
 			self.thirdCommand3 = True
 		if inputCommand == "curl http://localhost:8001/api/v1/namespaces/default/pods/$POD_NAME/proxy/":
 			self.fourthCommand3 = True
