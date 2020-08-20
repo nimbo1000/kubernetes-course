@@ -15,10 +15,10 @@ details:
     title: kubectl basics
 #    code: foreground.sh
     text: step1.rst
-  - name: step1
+  - name: step2
     title: Deploy our app
     text: step2.rst
-  - name: step1
+  - name: step3
     title: View our app
     text: step3.rst
   intro:
