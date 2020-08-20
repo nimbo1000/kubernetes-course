@@ -11,7 +11,7 @@ class LabGrader(Grader):
 
 	@Grader.addStep(name='step2')
 	def step2(self, workingDir, inputCommand):
- 		clusterInfo = False
+		clusterInfo = False
 		getNodes = False
 		if inputCommand == "kubectl cluster-info":
 			clusterInfo = True
