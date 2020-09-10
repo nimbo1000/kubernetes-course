@@ -1,5 +1,6 @@
 title: Kubernetes
 description: Learn the basic Kubernetes commands
+display_image: https://dytvr9ot2sszz.cloudfront.net/wp-content/uploads/2020/06/What-are-the-hardest-parts-of-Kubernetes-to-learn_-1.png
 labs:
   - title: Create a Kubernetes cluster
     description: Create a Kubernetes cluster
